@@ -19,6 +19,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: helix_left
+    shield: dm565_left
   - board: nice_nano_v2
-    shield: helix_right
+    shield: dm565_right

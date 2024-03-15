@@ -1,0 +1,11 @@
+file_format: "1"
+id: dm565
+name: dm565
+type: shield
+url: https://github.com/kyanch/zmk-config
+requires: [nice_nano_v2]
+features:
+  - keys
+siblings:
+  - dm565_left
+  - dm565_right
