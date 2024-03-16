@@ -36,10 +36,10 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)                  RC(3,6) RC(3,7)
         row-gpios
             = <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row A from the schematic file
             , <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row B from the schematic file
-            , <&gpio1 00 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row C from the schematic file
+            , <&gpio1  0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row C from the schematic file
             , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row D from the schematic file
-            , <&gpio1 04 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row E from the schematic file
-            , <&gpio1 06 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row F from the schematic file
+            , <&gpio1  4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row E from the schematic file
+            , <&gpio1  6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row F from the schematic file
             ;
 
     };
