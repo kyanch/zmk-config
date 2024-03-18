@@ -1,7 +1,7 @@
 if SHIELD_DM565_LEFT
 
     config ZMK_KEYBOARD_NAME
-        default "DM-5x6(Left)"
+        default "DM565(Left)"
 
     config ZMK_SPLIT_BLE_ROLE_CENTRAL
         default y
@@ -11,7 +11,7 @@ endif
 if SHIELD_DM565_RIGHT
 
     config ZMK_KEYBOARD_NAME
-        default "DM-5x6(Right)"
+        default "DM565(Right)"
 
 endif
 
