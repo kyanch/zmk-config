@@ -22,3 +22,5 @@ include:
     shield: dm565_left
   - board: nice_nano_v2
     shield: dm565_right
+  - board: nice_nano_v2
+    shield: settings_reset
