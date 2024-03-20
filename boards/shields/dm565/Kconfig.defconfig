@@ -3,9 +3,6 @@ if SHIELD_DM565_LEFT
     config ZMK_KEYBOARD_NAME
         default "DM565(Left)"
 
-    config ZMK_SPLIT_ROLE_CENTRAL
-        default y
-
 endif
 
 if SHIELD_DM565_RIGHT
@@ -13,6 +10,9 @@ if SHIELD_DM565_RIGHT
     config ZMK_KEYBOARD_NAME
         default "DM565(Right)"
 
+    config ZMK_SPLIT_ROLE_CENTRAL
+        default y
+        
 endif
 
 if SHIELD_DM565_LEFT || SHIELD_DM565_RIGHT
