@@ -11,72 +11,79 @@
 #define SYS 5
 #define MOUZ 6
 
+
 / {
     behaviors {
-        td_cap_a : tap_dance_a{
-            compatible = "zmk,behaviors-tap-dance";
-            tapping-terms-ms = <200>;
+        
+        td_cap_a: tap_dance_a {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
             bindings = <&kp A>, <&kp LS(A)>;
         };
-        td_cap_b : tap_dance_b{
-            compatible = "zmk,behaviors-tap-dance";
-            tapping-terms-ms = <200>;
+        td_cap_b: tap_dance_b{
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
             bindings = <&kp B>, <&kp LS(B)>;
         };
-        td_cap_c : tap_dance_c{
-            compatible = "zmk,behaviors-tap-dance";
-            tapping-terms-ms = <200>;
+        td_cap_c: tap_dance_c{
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
             bindings = <&kp C>, <&kp LS(C)>;
         };
-        td_cap_d : tap_dance_d{
-            compatible = "zmk,behaviors-tap-dance";
-            tapping-terms-ms = <200>;
+        td_cap_d: tap_dance_d{
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
             bindings = <&kp D>, <&kp LS(D)>;
         };
-        td_cap_e : tap_dance_e{
-            compatible = "zmk,behaviors-tap-dance";
-            tapping-terms-ms = <200>;
+        td_cap_e: tap_dance_e{
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
             bindings = <&kp E>, <&kp LS(E)>;
         };
-        td_cap_f : tap_dance_f{
-            compatible = "zmk,behaviors-tap-dance";
-            tapping-terms-ms = <200>;
+        td_cap_f: tap_dance_f{
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
             bindings = <&kp F>, <&kp LS(F)>;
         };
-        td_cap_x : tap_dance_x{
-            compatible = "zmk,behaviors-tap-dance";
-            tapping-terms-ms = <200>;
+        td_cap_x: tap_dance_x{
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
             bindings = <&kp X>, <&kp LS(X)>;
         };
-        /* tap dace + - * / */
-        td_op_four : tap_dance_op_four{
-            compatible = "zmk,behaviors-tap-dance";
-            tapping-terms-ms = <200>;
+        // tap dace + - * / 
+        td_op_four: tap_dance_op_four{
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
             bindings = <&kp KP_PLUS>, <&kp KP_MINUS>,<&kp KP_MULTIPLY>,<&kp KP_DIVIDE>;
         };
-        /* tap dace () [] {}*/
-        td_braket_r : tap_dance_braket_r{
-            compatible = "zmk,behaviors-tap-dance";
-            tapping-terms-ms = <200>;
+        // tap dace () [] {}
+        td_braket_r: tap_dance_braket_r{
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
             bindings = <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACKET>,<&kp RIGHT_BRACE>;
         };
-        td_braket_l : tap_dance_braket_l{
-            compatible = "zmk,behaviors-tap-dance";
-            tapping-terms-ms = <200>;
+        td_braket_l: tap_dance_braket_l{
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
             bindings = <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACKET>,<&kp LEFT_BRACE>;
         };
-
-        td_cap_x : tap_dance_x{
-            compatible = "zmk,behaviors-tap-dance";
-            tapping-terms-ms = <200>;
-            bindings = <&kp X>, <&kp LS(X)>;
-        };
-
+        
         td_lay_switch: tap_dance_lay_switch{
-            compatible = "zmk,behaviors-tap-dance";
-            tapping-terms-ms = <200>;
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
             bindings = <&to DEFAULT>, <&to NUM>, <&to FKEY>,<&to NAVI>,<&to SYS>;
-        }
+        };
     };
 
     keymap {
@@ -86,34 +93,35 @@
             bindings = < 
                 &kp DLLR    &kp AMPS     &kp LBKT      &kp LBRC     &kp RBRC     &kp LPAR                                        &kp EQUAL   &kp STAR    &kp RPAR   &kp PLUS      &kp RBKT     &kp EXCL
                 &kp AT      &kp SEMI     &kp COMMA     &kp DOT      &kp P        &kp Y                                           &kp F       &kp G       &kp C      &kp R         &kp L        &kp FSLH
-                &kp BLSH    &kp A        &kp O         &kp E        &kp U        &kp I                                           &kp D       &kp H       &kp T      &kp N         &kp S        &kp MINUS
-                &none       &kp SQT      &kp Q         &kp J        &kp K        &kp X                                           &kp B       &kp M       &kp W      &kp V         &kp Z        &kp POUND
+                &kp BSLH    &kp A        &kp O         &kp E        &kp U        &kp I                                           &kp D       &kp H       &kp T      &kp N         &kp S        &kp MINUS
+                &kp TAB     &kp SQT      &kp Q         &kp J        &kp K        &kp X                                           &kp B       &kp M       &kp W      &kp V         &kp Z        &kp POUND
                                          &kp LGUI      &kp LALT                                                                                          &to FKEY    &kp RGUI
-                                                                    &lt SHIFT DEL  &lt NUM SPACE    &lt NAVI LGUI          &td_lay_switch RGUI &lt NUM SPACE   &lt SHIFT BSPC
+                                                                    &lt SHIFT DEL  &lt NUM SPACE    &lt NAVI LGUI          &lt NAVI ENTER &lt NUM SPACE   &lt SHIFT BSPC
                                                                                    &kp LCTRL    &kp LCTRL                  &kp ENTER &kp RCTRL
             >;
         };
+        
         shift_layer {
             bindings = <
                 &kp TILDE   &kp PERCENT  &kp N7        &kp N5       &kp N3       &kp N1                                          &kp N9      &kp N0       &kp N2       &kp N4      &kp N6       &kp N8
                 &kp CARET   &kp COLON    &kp LT        &kp GT       &kp LS(P)    &kp LS(Y)                                       &kp LS(F)   &kp LS(G)    &kp LS(C)    &kp LS(R)   &kp LS(L)    &kp QMARK
                 &kp PIPE    &kp LS(A)    &kp LS(O)     &kp LS(E)    &kp LS(U)    &kp LS(I)                                       &kp LS(D)   &kp LS(H)    &kp LS(T)    &kp LS(N)   &kp LS(S)    &kp UNDER 
-                &none       &kp DQT      &kp LS(Q)     &kp LS(J)    &kp LS(K)    &kp LS(X)                                       &kp LS(B)   &kp LS(M)    &kp LS(W)    &kp LS(V)   &kp LS(Z)    &kp GRAVE
+                &kp LS(TAB) &kp DQT      &kp LS(Q)     &kp LS(J)    &kp LS(K)    &kp LS(X)                                       &kp LS(B)   &kp LS(M)    &kp LS(W)    &kp LS(V)   &kp LS(Z)    &kp GRAVE
                                          &kp LBKT      &kp RBKT                                                                                            &kp PLUS    &kp EQUAL
-                                                                    &lt LWR BSPC &kp TAB  &kp LCTRL                   &kp RCTRL  &kp TAB     &lt LWR DEL
-                                                                    &kp LALT &kp LGUI                                 &kp RGUI   &kp RALT
+                                                                    &kp LS(DEL) &kp TAB  &kp LCTRL                   &kp RCTRL  &kp TAB     &kp LS(BSPC)
+                                                                    &kp LALT &kp LGUI                                     &kp RGUI   &kp RALT
             >;
         };
 
         number_layer {
             bindings = <
-                &trans  &trans      &trans    &trans    &trans  &trans                            &kp LOCKING_NUM  &td_cap_a     &td_cap_b     &td_cap_c      &td_braket_l    &td_braket_r
-                &trans  &trans      &trans    &trans    &trans  &trans                            &kp LS(X)        &kp KP_N7     &kp KP_N8     &kp KP_N9      &td_cap_d       &td_op_four
-                &trans  &trans      &trans    &trans    &mo FKEY  &mo FKEY                            &kp td_cap_x     &kp KP_N4     &kp KP_N5     &kp KP_N6      &td_cap_e       &kp EQUAL
-                &trans  &mo SYS     &none     &trans    &trans  &trans                            &kp KP_N0        &kp KP_N1     &kp KP_N2     &kp KP_N3      &td_cap_f       &kp KP_ENTER
-                                    &trans   &trans                                                                              &kp KP_N0     &kp KP_DOT
-                                                                   &trans &kp SPACE   &kp DEL                         &td_lay_switch &kp N0 &kp BACKSPACE
-                                                                          &tog NUM    &trans                          &kp ENTER &trans
+                &sys_reset &trans      &trans    &trans    &trans  &trans                                              &kp LOCKING_NUM  &td_cap_a     &td_cap_b     &td_cap_c      &td_braket_l    &td_braket_r
+                &trans     &trans      &trans    &trans    &trans  &trans                                                 &kp LS(X)        &kp KP_N7     &kp KP_N8     &kp KP_N9      &td_cap_d       &td_op_four
+                &trans     &trans      &trans    &trans    &mo FKEY  &mo FKEY                                             &td_cap_x        &kp KP_N4     &kp KP_N5     &kp KP_N6      &td_cap_e       &kp EQUAL
+                &trans     &mo SYS     &none     &trans    &mo FKEY  &mo FKEY                                             &kp KP_N0        &kp KP_N1     &kp KP_N2     &kp KP_N3      &td_cap_f       &kp KP_ENTER
+                                    &trans   &trans                                                                                                   &kp KP_N0     &kp KP_DOT
+                                                                   &trans &kp SPACE   &kp DEL           &kp ENTER &kp N0 &kp BACKSPACE
+                                                                          &tog NUM    &trans            &kp ENTER &trans
             >;
         };
 
@@ -124,7 +132,7 @@
                 &trans &trans &none  &none &none  &none                         &kp F8   &kp F4  &kp F5  &kp F6  &kp F14 &kp F17
                 &trans &trans &trans &none &none  &trans                        &kp F9   &kp F1  &kp F2  &kp F3  &kp F15 &kp F18
                                    &none        &none                                                   &none &none
-                                                      &none &none &trans        &td_lay_switch &none &none
+                                                      &to DEFAULT  &none &trans        &none &none &to DEFAULT 
                                                       &tog FKEY &none               &none &none
             >;
         };
@@ -135,22 +143,23 @@
                 &none   &kp CAPS  &none &none &none  &none                                   &kp HOME    &kp LEFT  &kp DOWN     &kp RIGHT &kp END   &kp PRINTSCREEN
                 &none   &none     &none &none &none  &none                                   &none       &none     &kp DOWN     &kp PG_DN &kp K_APP &none
                                    &none        &none                                                              &none        &none
-                                                      &none    &none &trans           &td_lay_switch &none &none
-                                                      &tog NAVI &none                         &none &none
+                                                      &to DEFAULT     &none &trans           &none &none &to DEFAULT 
+                                                                  &tog NAVI &none          &none &none
             >;
         };
         
         system_layer {
             bindings = <
-                &bt BT_SEL 0  &bt BT_CLR         &out  OUT_USB       &trans      &trans        &trans                         &none       &bt BT_CLR         &out  OUT_USB   &none &none &none           
-                &bt BT_SEL 1  &bt BT_CLR_ALL     &out  OUT_BLE       &bt BT_DISC &trans        &trans                         &none       &bt BT_CLR_ALL     &out  OUT_BLE   &none &none &none
-                &bt BT_SEL 2  &bt BT_NXT         &out  OUT_TOG       &trans      &mo FKEY      &mo FKEY                       &none       &bt BT_NXT         &out  OUT_TOG   &none &none &none    
-                &bt BT_SEL 3  &bt BT_DISC        &mo SYS             &trans      &trans        &trans                         &bootloader &bt BT_DISC        &mo SYS         &none &none &none
-                                                 &sys_reset          &bootloader                                                                             &bootloader     &sys_reset
-                                                                     &trans      &kp SPACE     &kp DEL          &td_lay_switch &none &none
-                                                                                 &tog SYS      &trans           &kp ENTER &tog SYS
+                &bt BT_SEL 0  &bt BT_DISC 0      &bt BT_CLR       &out  OUT_USB    &trans        &trans                         &none         &bt BT_CLR         &out  OUT_USB   &bt BT_CLR     &bt BT_DISC 0 &bt BT_SEL 0           
+                &bt BT_SEL 1  &bt BT_DISC 1      &bt BT_CLR_ALL   &out  OUT_BLE    &trans        &trans                         &none         &bt BT_CLR_ALL     &out  OUT_BLE   &bt BT_CLR_ALL &bt BT_DISC 1 &bt BT_SEL 1
+                &bt BT_SEL 2  &bt BT_DISC 2      &bt BT_NXT       &out  OUT_TOG    &mo SYS       &mo SYS                        &none         &bt BT_NXT         &out  OUT_TOG   &bt BT_NXT     &bt BT_DISC 2 &bt BT_SEL 2    
+                &bt BT_SEL 3  &bt BT_DISC 3      &bt BT_PRV       &trans           &trans        &trans                         &bootloader   &bt BT_PRV         &mo SYS         &none          &bt BT_DISC 3 &bt BT_SEL 3
+                                                 &sys_reset       &bootloader                                                                                    &bootloader     &sys_reset
+                                                                        &to DEFAULT      &kp SPACE     &kp DEL            &none &none       &to DEFAULT
+                                                                                 &tog SYS      &trans                     &kp ENTER &tog SYS
             >;
         };
+        
         mouse_layer {
             bindings = <
                 &none &none &none &none &none  &none                          &none &none  &none &none &none &none
@@ -162,5 +171,6 @@
                                               &tog MOUZ &none           &none &none
             >;
         };
+        
     };
 };
